@@ -1,0 +1,24 @@
+<div class="container">
+    <form>
+      <label for="psw1">Password</label>
+      <input type="password" id="psw1" name="psw1" required>
+      <br>
+      <label for="psw2">Re-enter Password</label>
+      <input type="password" id="psw2" name="psw2" required>
+    </form>
+</div>
+<button value="Validate"onclick="validation()">Validate</button>
+<script>
+    var myInput1 = document.getElementById("psw1");
+    var myInput2 = document.getElementById("psw2");
+    function validation() {
+      // Validate length
+      if(myInput1.value.length < 8) {
+        alert("Password must contain at least 8 characters!");
+      }
+      // Validate matching
+      if(myInput1.value != myInput2.value){
+        alert("Passwords must match!");
+      }
+    }
+</script>
