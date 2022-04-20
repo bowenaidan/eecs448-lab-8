@@ -1,0 +1,36 @@
+<button onclick="previous()">PREVIOUS</button>
+<img id="img" src="1.jpg" height="300" width="500">
+<button onclick="next()">NEXT</button>
+<script>
+    var pictures = {
+        1: "1.jpg",
+        2: "2.jpg",
+        3: "3.jpg",
+        4: "4.jpg",
+        5: "5.jpg"
+    };
+    
+    var current = 1;
+    function previous(){
+        if(current != 1)
+        {
+            current--;
+        }
+        else
+        {
+            current = 5;
+        }
+        document.getElementById("img").src=pictures[current];
+    }
+    function next(){
+        if(current != 5)
+        {
+            current++;
+        }
+        else
+        {
+            current = 1;
+        }
+        document.getElementById("img").src=pictures[current];
+    }
+</script>
