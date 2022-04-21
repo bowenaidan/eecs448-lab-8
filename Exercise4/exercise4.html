@@ -1,0 +1,52 @@
+<html>
+    <body>
+        <h2>Border Selection (00-FF)</h2>
+        <form id="selection">
+            <label for="border_red">Red Value  </label>
+            <input type="text"  id="border_red" placeholder="Hexidecimal"><br>
+            <label for="border_green">Green Value  </label>
+            <input type="text"  id="border_green" placeholder="Hexidecimal"><br>
+            <label for="border_blue">Blue Value  </label>
+            <input type="text"  id="border_blue" placeholder="Hexidecimal"><br>
+            <label for="border_width">Width  </label>
+            <input type="text"  id="border_width" placeholder="Integer"><br>
+            <h2>Background Color (00-FF)</h2>
+            <label for="background_red">Red Value  </label>
+            <input type="text"  id="background_red" placeholder="Hexidecimal"><br>
+            <label for="background_green">Green Value  </label>
+            <input type="text"  id="background_blue" placeholder="Hexidecimal"><br>
+            <label for="background_blue">Blue Value  </label>
+            <input type="text"  id="background_blue" placeholder="Hexidecimal"><br>
+        </form>
+        <button onclick="cssChange()">Submit</button>
+        <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie facilisis nisl at vehicula.
+        Ut efficitur mattis lacinia. Proin sit amet quam arcu. Nunc finibus luctus vestibulum. Etiam volutpat, 
+        purus ut aliquam ultrices, ante justo dictum ex, sed sollicitudin ante dolor non massa. Nullam at elementum 
+        neque. Praesent metus risus, maximus quis sapien sit amet, elementum tincidunt leo.</p>
+        <script>
+            function cssChange()
+            {
+                let form = document.getElementById("selection");
+                let border_color = "#";
+                let border_width = "";
+                let background_color = "#";
+                for(let i=0; i<7; i++)
+                {
+                    if(i<3)
+                    {
+                        border_color+=form.elements[i].value;
+                    }
+                    else if(i==3)
+                    {
+                        border_width=form.elements[i].value + "px";
+                    }
+                    else
+                    {
+                        background_color+=form.elements[i].value;
+                    }
+                }
+                document.getElementById("paragraph").style = "border-color:" + border_color + ";border-width:" + border_width + ";background-color:" + background_color +";";
+            }
+        </script>
+    </body>
+</html>
