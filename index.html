@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Aidan's Page</title>
+    </head>
+    <link rel="stylesheet" href = "indexStyle.css">
+    <body>
+        <div id="link-navbar" class="navbar" style="display:block;">
+            <a id="title-a">Aidan's Homepage</a>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="dropdown_buttons()">Exercise List
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="dropdown-menu">
+                <a href="./Exercise1/exercise1.html">Exercise 1</a>
+                <a href="./Exercise2/exercise2.html"">Exercise 2</a>
+                <a href="./Exercise3/exercise3.html"">Exercise 3</a>
+                <a href="./Exercise4/exercise4.html"">Exercise 4</a>
+              </div>
+            </div>
+          </div>
+          <script>
+                function dropdown_buttons() 
+                {
+                    document.getElementById("dropdown-menu").style.display = "block";
+                }
+          </script>
+          <img src="./Exercise3/photo.jpg" class="center">
+    </body>
+</html>
