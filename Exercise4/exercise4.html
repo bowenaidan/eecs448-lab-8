@@ -19,7 +19,7 @@
             <input type="text"  id="background_blue" placeholder="Hexidecimal"><br>
         </form>
         <button onclick="cssChange()">Submit</button>
-        <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie facilisis nisl at vehicula.
+        <p id="paragraph" style="border-style: solid;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie facilisis nisl at vehicula.
         Ut efficitur mattis lacinia. Proin sit amet quam arcu. Nunc finibus luctus vestibulum. Etiam volutpat, 
         purus ut aliquam ultrices, ante justo dictum ex, sed sollicitudin ante dolor non massa. Nullam at elementum 
         neque. Praesent metus risus, maximus quis sapien sit amet, elementum tincidunt leo.</p>
@@ -45,7 +45,7 @@
                         background_color+=form.elements[i].value;
                     }
                 }
-                document.getElementById("paragraph").style = "border-color:" + border_color + ";border-width:" + border_width + ";background-color:" + background_color +";";
+                document.getElementById("paragraph").style = "border: " + border_color + ";border-width: " + border_width + ";background-color: " + background_color +";";
             }
         </script>
     </body>
